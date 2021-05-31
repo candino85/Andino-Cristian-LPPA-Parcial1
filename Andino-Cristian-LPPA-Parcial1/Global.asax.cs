@@ -1,3 +1,4 @@
+using Andino_Cristian_LPPA_Parcial1.App_Start;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,8 @@ namespace Andino_Cristian_LPPA_Parcial1
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
+            ContainerConfig.RegisterContainer();
         }
     }
 }
