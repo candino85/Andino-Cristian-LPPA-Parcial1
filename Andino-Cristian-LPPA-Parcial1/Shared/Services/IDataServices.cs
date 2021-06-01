@@ -16,7 +16,6 @@ namespace Andino_Cristian_LPPA_Parcial1.Shared.Services
             Func<IQueryable<T>, IOrderedQueryable<T>> orderFunction = null, // si quiero que venga ordenado por un criterio, por defaul es null
             string includeModels = ""); // le digo con que otro modelo esta incluido para nevegar a otros objetos y poder recuperar sus valores
         T GetById(int id);
-        T Create(T entity);
         void Update(T entity);
         void Delete(T entity);
         void Delete(int id);

@@ -17,12 +17,6 @@ namespace Andino_Cristian_LPPA_Parcial1.Shared.Services
         {
             this.Db = new Parcial1DbContext();
         }
-        public T Create(T entity)
-        {
-            Db.Set<T>().Add(entity);
-            Db.SaveChanges();
-            return entity;
-        }
 
         public void Delete(T entity)
         {
@@ -31,8 +25,9 @@ namespace Andino_Cristian_LPPA_Parcial1.Shared.Services
         }
 
         public void Delete(int id)
-        {
-            throw new NotImplementedException();
+        {            
+            Db.Set<T>().Remove(this.GetById(id));
+            Db.SaveChanges();
         }
 
         public List<T> Get(Expression<Func<T, bool>> whereExpression = null, Func<IQueryable<T>, IOrderedQueryable<T>> orderFunction = null, string includeModels = "")

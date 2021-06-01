@@ -1,17 +1,11 @@
 ﻿
 @{
-    Layout = null;
+    ViewBag.Title = "Index Home";
 }
 
-<!DOCTYPE html>
+<h2>@ViewBag.Title</h2>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
-<body>
-    <div> 
-    </div>
-</body>
-</html>
+<p>
+    <a href="@Url.Action("Index","Afiliados")">Afiliados</a>
+</p>
+

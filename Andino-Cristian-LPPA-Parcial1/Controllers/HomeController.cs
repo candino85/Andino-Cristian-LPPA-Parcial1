@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace Andino_Cristian_LPPA_Parcial1.Controllers
 {
+    [AllowAnonymous]
     public class HomeController : Controller
     {
         [HttpGet]
